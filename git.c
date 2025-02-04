@@ -185,43 +185,6 @@ void search_task(TASK *head, char *Xword) {
 
 
 
-void modifieTasck(int IDX,TASK*head) { // old version
-
-    TASK*current=head;
-    int conf;
-    struct TASK x;
-    int inpute;
-    char xs[100];
-
-
-    while(current!=NULL && current->DATA.ID != IDX){
-        current=current->NEXT;
-    }
-    if (current==NULL){
-        printf("this task dosent existe");
-        return;
-    }
-    printf("do you want modifie discription (1-yes|Any number-no): ");
-    scanf("%d",&conf);
-
-    if(conf==1){
-        printf("entre your modification: ");
-        scanf(" %[^\n]",current->DATA.NAME);
-        
-         printf("the modification sucsseded\n");
-    }
-         
-    printf("do you want modifie priority (1-yes|Any number-no): ");
-    scanf("%d",&conf);
-
-    if(conf==1){
-
-        printf("entre your modification: ");
-        scanf("%d",&current->DATA.NAME);
-        printf("the modification sucsseded\n");
-
-    }
-}
 
 int already_exist(TASK *list , int ID) {
 
